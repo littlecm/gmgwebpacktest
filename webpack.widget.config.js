@@ -1,7 +1,8 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: ['./widget.js'], // Make sure this is the correct path to your entry file
+  entry: ['./app/components/widget.js'],  // Adjusted path to reflect your project structure
   output: {
     path: path.resolve(__dirname, 'public/widget'),
     filename: 'widget-bundle.js',
@@ -25,9 +26,19 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.html$/,
+        use: ['html-loader']
       }
     ]
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'corvettetest.html',
+      template: './app/components/corvettetest.html'
+    })
+  ],
   resolve: {
     extensions: ['.js', '.jsx']
   },
