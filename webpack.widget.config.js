@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: ['./app/components/widget.js'],  // Adjusted path to reflect your project structure
   output: {
-    path: path.resolve(__dirname, 'public/widget'),
+    path: path.resolve(__dirname, 'public/js/widget'),
     filename: 'widget-bundle.js',
     library: 'SpecialsWidget',
     libraryTarget: 'umd',
