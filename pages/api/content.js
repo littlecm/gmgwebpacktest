@@ -6,9 +6,6 @@ export default async function handler(req, res) {
     // Allows all domains (*) to access your API
     res.setHeader('Access-Control-Allow-Origin', '*');
 
-    // You could also restrict it to a specific domain
-    // res.setHeader('Access-Control-Allow-Origin', 'https://example.com');
-
     // Allow Credentials
     res.setHeader('Access-Control-Allow-Credentials', true);
 
