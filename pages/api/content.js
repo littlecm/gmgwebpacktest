@@ -1,7 +1,6 @@
 import { readFile } from 'fs/promises';
 import { join } from 'path';
 
-
 export default async function handler(req, res) {
     // Set CORS headers
     // Allows all domains (*) to access your API
